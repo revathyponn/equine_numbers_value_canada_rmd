@@ -21,7 +21,7 @@ This project explores the historical population of horses in Canada between 1906
 
 ## Data
 
-```{r load data, include = FALSE}
+```{r load data, include=FALSE}
 horse_pop <- read_csv("../data/00030067-eng.csv")
 horse_pop <- filter(horse_pop,
                     DATE == "At June 1 (x 1,000)",
@@ -68,8 +68,7 @@ max_horses <- horse_pop %>%
   summarize(Maximum = max(Value),
             Minimum = min(Value))
 knitr::kable(max_horses,caption = "Table 1.Horse population in Canada"
-             ) |> 
-  kableExtra::kable_styling(full_width = FALSE)
+             ) |> kableExtra::kable_styling(full_width = FALSE)
 ```
 
 Below we zoom in and look at the province of Alberta:
